@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+	
+	<table>
+	<tr>Id   Name    Capitol    Population</tr>
+	<tr>
+	<td th:text = "${country.id}">ID</td>
+	<td th:text = "${country.name}">Name</td>
+	<td th:text = "${country.capitol}">Capitol</td>
+	<td th:text = "${country.population}">Population</td>
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<td> <a th:href="@{/edit/{id}(id=${country.id})}"> Edit Population</a></td>
+	</tr>
+	<!-- &nbsp;&nbsp;&nbsp;&nbsp;
+	<td> <a th:href="@{/country_details/{id}(id=${country.id})}">Delete</a>
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<td><a th:href="@{/edit/{id}(id=${country.id})}">Edit</a></td>
+	-->
+	</table>
+</html>
